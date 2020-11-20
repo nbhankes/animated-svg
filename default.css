@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  width: 50%;
+}
+
+#small-bubble {
+  animation: small-bubble 10s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes big-bubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-170px);
+  }
+}
+
+@keyframes mid-bubble {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes small-bubble {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-550px);
+  }
+}
+
+#mid-bubble {
+  animation: mid-bubble 4.5s ease infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#big-bubble {
+  animation: big-bubble 5.1s ease infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#Liquid {
+  animation: boil 2.3s ease infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes boil {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(15deg);
+  }
+}
